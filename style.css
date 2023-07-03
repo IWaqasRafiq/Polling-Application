@@ -1,0 +1,32 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #f2f2f2;
+}
+body{
+    background-image: url(./Img/Poll-BackGround.jpg);
+    background-size: auto;
+    
+}
+h1{
+    padding: 0.5em;
+    text-align: center;
+    font-weight: bolder !important;
+    color: rgb(64, 62, 60) !important;
+    text-shadow: 2px 2px 4px #ffffff;
+}
+.card {
+    width: 90%;
+    max-width: 475px;
+    /* background: linear-gradient(135deg, #26013D, #742d97); */
+    margin: 1.5rem auto 0;
+    border-radius: 25px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0) !important;
+    backdrop-filter: blur(9.8px);
+    -webkit-backdrop-filter: blur(9.8px);
+}
