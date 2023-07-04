@@ -1,5 +1,6 @@
 const addButton = document.getElementById("addButton");
 const createPoll = document.querySelector("create");
+const userQuestion = document.querySelector("#userQ").value; 
 const inputFirst = document.getElementById("input");
 const deleteInput = document.getElementById("dltBtn");
  
@@ -26,7 +27,11 @@ addButton.addEventListener("click", (e) => {
 
 createPoll.addEventListener("click",(e) => {
     e.preventDefault();
-    
+    document.querySelector(".Question").innerHTML = `userQuestion`;
+    document.querySelector("#userQ").style.display = "none";
+    document.querySelector(".input").style.display = "none";
+    // document.querySelector("#userQ").style.display = "none";
+
 }
 
 )
