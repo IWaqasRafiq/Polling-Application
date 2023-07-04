@@ -1,6 +1,7 @@
 const addButton = document.getElementById("addButton");
+const createPoll = document.querySelector("create");
 const inputFirst = document.getElementById("input");
-const deleteInput = document.getElementById("dltBtn")
+const deleteInput = document.getElementById("dltBtn");
  
 console.log(inputFirst)
 addButton.addEventListener("click", (e) => {
@@ -22,3 +23,10 @@ addButton.addEventListener("click", (e) => {
   inputFirst.parentElement.appendChild(deleteButton);
 
 });
+
+createPoll.addEventListener("click",(e) => {
+    e.preventDefault();
+    
+}
+
+)
