@@ -97,3 +97,9 @@ h1{
   .Create:hover {
     background: linear-gradient(to bottom, #56a3c4, #468faf);
   }
+  .dltBtn{
+    cursor: pointer;
+    position: absolute;
+    right: 1.4em;
+    bottom: 6.5rem;
+  }
