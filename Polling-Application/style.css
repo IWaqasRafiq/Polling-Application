@@ -1,0 +1,105 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #403e3c;
+}
+body{
+    background-image: url(./Img/Poll-BackGround.jpg);
+    background-repeat: no-repeat;    
+    background-size: auto;
+    
+}
+h1{
+    padding: 0.5em;
+    text-align: center;
+    font-weight: bolder !important;
+    color: #403e3c !important;
+    text-shadow: 2px 2px 4px #ffffff;
+}
+.card {
+    width: 90%;
+    max-width: 475px;
+    /* background: linear-gradient(135deg, #26013D, #742d97); */
+    margin: 1.5rem auto 0;
+    border-radius: 25px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0) !important;
+    backdrop-filter: blur(9.8px);
+    -webkit-backdrop-filter: blur(9.8px);
+}
+.poll{
+    text-align: left;
+}
+.ques,.option{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    font-weight: bolder;
+
+}
+.ques input{
+
+    border: none;
+    background: none;
+    border-bottom: 1px solid #000000;
+    margin-top: 1.3rem;
+    
+}
+.ques input:focus{
+    outline: none;
+    /* border-bottom: 1px solid #9effea */
+
+}
+.option input{
+    
+    border: none;
+    background: none;
+    border-bottom: 1px solid #000000;
+    margin-top: 1.3rem;
+}
+.option input:focus{
+    outline: none;
+    /* border-bottom: 1px solid #9effea */
+
+}
+.option{
+    margin-top: 2em;
+}
+.input{
+    margin-top: 2.5em !important;
+}
+.add, .Create {
+    background: linear-gradient(to bottom, #468faf, #56a3c4);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 1.5em;
+  }
+
+  .add:hover {
+    background: linear-gradient(to bottom, #56a3c4, #468faf);
+  }
+  .Create{
+    position: absolute;
+    right: 1.3em;
+  }
+  .Create:hover {
+    background: linear-gradient(to bottom, #56a3c4, #468faf);
+  }
+  .dltBtn{
+    cursor: pointer;
+    position: absolute;
+    right: 1.4em;
+    bottom: 6.5rem;
+  }
