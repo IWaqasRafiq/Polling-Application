@@ -31,7 +31,7 @@ h1{
     backdrop-filter: blur(9.8px);
     -webkit-backdrop-filter: blur(9.8px);
 }
-.poll{
+.poll, .pollAnswer {
     text-align: left;
 }
 .ques,.option{
