@@ -54,14 +54,30 @@ function displayUserInputs() {
 
     const userInputElement = document.createElement("p");
     userInputElement.textContent = userInputs[i];
+    optionDiv.appendChild(userInputElement);
 
+    // const clicksData = "clickedValue"
     const progressBar = document.createElement("progress");
     progressBar.setAttribute("id", "file");
     progressBar.setAttribute("max", "100");
-    progressBar.setAttribute("value", "50");
+    progressBar.setAttribute("value", "0");
+    const progressText = document.createElement("span");
+    progressText.setAttribute("class", "progress-text");
+    progressText.textContent = "0%";
 
-    optionDiv.appendChild(userInputElement);
+    progressBar.addEventListener("click", () => {
+      let currentValue = progressBar.value;
+      currentValue = Number(currentValue) + 1; // Increment the current value by 1
+      progressBar.value = currentValue; // Update the progress bar value
+      progressText.textContent = `${currentValue}%`; // Update the progress text
+    });
+
     optionDiv.appendChild(progressBar);
+    optionDiv.appendChild(progressText);
+    
     userInputContainer.appendChild(optionDiv);
   }
 }
+
+
+
