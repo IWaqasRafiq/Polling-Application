@@ -103,3 +103,16 @@ h1{
     right: 1.4em;
     bottom: 6.5rem;
   }
+  
+  #Question{
+    font-size: larger;
+  }
+#option{
+    margin-top: 0;
+}
+#file{
+    width: 100%;
+    height: 1.5em !important;
+    cursor: pointer;
+
+}
