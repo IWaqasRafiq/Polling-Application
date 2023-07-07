@@ -11,13 +11,13 @@
 <body>
     <h1>Polls Application</h1>
     <div class="card">
-        <div class="pollAnswer">
+        <div class="pollAnswer" style="display: none;">
             <div class="ques">
-                <p class="Question">What Is Your Fav Lang ?</p>
+                <p id="Question">What Is Your Fav Lang ?</p>
             </div>
-            <div class="option">
-                <p class="userinput">JavaScript</p>
-                <p class="userinput">Python</p>
+            <div class="option" id="option">
+                <p id="userinput" class="userinput"></p>
+                <progress id="progressbar" style="display: none !important"></progress>
             </div>
         </div>
         <div class="poll">
@@ -27,11 +27,10 @@
             </div>
             <div class="option">
                 Options : 
-                <input class="input" type="text" placeholder=" Add">
-                <input class="input" id="input" type="text" placeholder=" Add"> <span><img class="dltBtn" src="./Img/x-circle.svg" alt=""></span> 
+                <input class="input" id="input" type="text" placeholder=" Add"> <span><img class="dltBtn" src="../Img/x-circle.svg" alt=""></span> 
             </div>
             <button id="addButton" class="add">Add</button>
-            <button class="Create">Create Poll</button>
+            <button id="Create" class="Create">Create Poll</button>
         </div>
     </div>
 
