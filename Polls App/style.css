@@ -7,7 +7,7 @@
     color: #403e3c;
 }
 body{
-    background-image: url(../Img/Poll-BackGround.jpg);
+    background-image: url(../Img/rm222-mind-16.jpg);
     background-repeat: no-repeat;    
     background-size: cover;
     
@@ -15,12 +15,19 @@ body{
 .cards{
     display: flex;
     flex-wrap: wrap;
+    
 }
 #resultsContainer {
     display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
     flex-wrap: wrap;
-    justify-content: flex-start;
-  }
+    font-weight: bolder;
+ }
+ .option-item{
+    margin-top: 2em;
+    
+ }
 h1{
     padding: 0.5em;
     text-align: center;
@@ -30,8 +37,7 @@ h1{
 }
 .Qcard, .Pcard  {
     width: 90%;
-    max-width: 475px;
-    /* background: linear-gradient(135deg, #26013D, #742d97); */
+    max-width: 50em;
     margin: 1.5rem 1em 1em 2em;
     border-radius: 25px;
     padding: 2rem 1.5rem;
@@ -64,7 +70,6 @@ h1{
 }
 .ques input:focus{
     outline: none;
-    /* border-bottom: 1px solid #9effea */
 
 }
 .option input{
@@ -76,13 +81,12 @@ h1{
 }
 .option input:focus{
     outline: none;
-    /* border-bottom: 1px solid #9effea */
 
 }
 .option{
     margin-top: 2em;
 }
-.input{
+.input, .Minput{
     margin-top: 2.5em !important;
 }
 .add, .Create, .CreateM {
@@ -123,7 +127,7 @@ h1{
 #option{
     margin-top: 0;
 }
-#file, #Ppro{
+#file, .Ppro{
     width: 100% !important;
     height: 1.5em !important;
     cursor: pointer;
