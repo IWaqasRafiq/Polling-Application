@@ -40,8 +40,9 @@ createPoll.addEventListener("click", (e) => {
   });
 
   displayUserInputs();
-  document.querySelector(".poll").style.display = "none";
-  document.querySelector(".pollAnswer").style.display = "block";
+  document.querySelector(".Qcard").style.display = "none";
+  document.querySelector(".Pcard").style.display = "block";
+  document.querySelector(".Qmodal").style.display = "block";
 });
 
 
@@ -79,5 +80,24 @@ function displayUserInputs() {
   }
 }
 
+document.getElementById("addButtonM").addEventListener("click", (event) => {
+  // Prevent the modal from being closed
+  event.preventDefault();
+  // event.stopPropagation();
+  const newInput = document.createElement("input");
+input.type = "text";
+newInput.setAttribute("class", "input");
+newInput.setAttribute("placeholder", "Add");
+  console.log(newInput)
+inputFirst.parentElement.appendChild(newInput);
 
+const deleteButton = document.createElement("img");
+deleteButton.setAttribute("src", "../Img/x-circle.svg");
+deleteButton.setAttribute("class", "dltBtn");
+deleteButton.addEventListener("click", () => {
+  inputFirst.parentElement.removeChild(newInput);
+  inputFirst.parentElement.removeChild(deleteButton);
+});
+inputFirst.parentElement.appendChild(deleteButton);
 
+});

@@ -12,6 +12,10 @@ body{
     background-size: auto;
     
 }
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
 h1{
     padding: 0.5em;
     text-align: center;
@@ -19,17 +23,21 @@ h1{
     color: #403e3c !important;
     text-shadow: 2px 2px 4px #ffffff;
 }
-.card {
+.Qcard, .Pcard  {
     width: 90%;
     max-width: 475px;
     /* background: linear-gradient(135deg, #26013D, #742d97); */
-    margin: 1.5rem auto 0;
+    margin: 1.5rem 1em 1em 2em;
     border-radius: 25px;
     padding: 2rem 1.5rem;
     text-align: center;
     background: rgba(0, 0, 0, 0) !important;
     backdrop-filter: blur(9.8px);
     -webkit-backdrop-filter: blur(9.8px);
+    outline: solid 1px black;
+}
+.Qmodal{
+    margin: 1.5rem 1em 1em 2em;
 }
 .poll, .pollAnswer {
     text-align: left;
@@ -72,7 +80,7 @@ h1{
 .input{
     margin-top: 2.5em !important;
 }
-.add, .Create {
+.add, .Create, .CreateM {
     background: linear-gradient(to bottom, #468faf, #56a3c4);
     border: none;
     color: white;

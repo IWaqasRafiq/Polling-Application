@@ -1,43 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polls Application</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 </head>
+
 <body>
     <h1>Polls Application</h1>
-    <div class="card">
-        <div class="pollAnswer" style="display: none;">
-            <div class="ques">
-                <p id="Question">What Is Your Fav Lang ?</p>
+    <button type="button" class="btn btn-primary Qmodal" style="display: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Create Poll
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create New Poll</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ques">
+                        Question :
+                        <input id="userQ" type="text" placeholder=" Ask Question">
+                    </div>
+                    <div class="option">
+                        Options :
+                        <input class="input" id="Minput" type="text" placeholder=" Add"> <span><img class="dltBtn"
+                                src="../Img/x-circle.svg" alt=""></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="addButtonM" class="add" class="btn btn-secondary"
+                        >Add</button>
+                    <button type="button" id="CreateM" class="CreateM" class="btn btn-primary">Create Poll</button>
+                </div>
             </div>
-            <div class="option" id="option">
-                <p id="userinput" class="userinput"></p>
-                <progress id="progressbar" style="display: none !important"></progress>
-            </div>
-        </div>
-        <div class="poll">
-            <div class="ques">
-                Question : 
-                <input id="userQ" type="text" placeholder=" Ask Question">
-            </div>
-            <div class="option">
-                Options : 
-                <input class="input" id="input" type="text" placeholder=" Add"> <span><img class="dltBtn" src="../Img/x-circle.svg" alt=""></span> 
-            </div>
-            <button id="addButton" class="add">Add</button>
-            <button id="Create" class="Create">Create Poll</button>
         </div>
     </div>
+    <div class="cards">
 
-
+        <div class="Qcard">
+            <div class="poll">
+                <div class="ques">
+                    Question :
+                    <input id="userQ" type="text" placeholder=" Ask Question">
+                </div>
+                <div class="option">
+                    Options :
+                    <input class="input" id="input" type="text" placeholder=" Add"> <span><img class="dltBtn"
+                            src="../Img/x-circle.svg" alt=""></span>
+                </div>
+                <button id="addButton" class="add">Add</button>
+                <button id="Create" class="Create">Create Poll</button>
+            </div>
+        </div>
+        <div class="Pcard" style="display:none;">
+            <div class="pollAnswer" >
+                <div class="ques">
+                    <p id="Question">What Is Your Fav Lang ?</p>
+                </div>
+                <div class="option" id="option">
+                    <p id="userinput" class="userinput"></p>
+                    <progress id="progressbar" style="display: none !important"></progress>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
