@@ -80,24 +80,28 @@ function displayUserInputs() {
   }
 }
 
-document.getElementById("addButtonM").addEventListener("click", (event) => {
-  // Prevent the modal from being closed
-  event.preventDefault();
-  // event.stopPropagation();
-  const newInput = document.createElement("input");
-input.type = "text";
-newInput.setAttribute("class", "input");
-newInput.setAttribute("placeholder", "Add");
-  console.log(newInput)
-inputFirst.parentElement.appendChild(newInput);
+document.getElementById("addButtonM").addEventListener("click", () => {
+  var optionsContainer = document.getElementById("optionsContainer");
 
-const deleteButton = document.createElement("img");
-deleteButton.setAttribute("src", "../Img/x-circle.svg");
-deleteButton.setAttribute("class", "dltBtn");
-deleteButton.addEventListener("click", () => {
-  inputFirst.parentElement.removeChild(newInput);
-  inputFirst.parentElement.removeChild(deleteButton);
-});
-inputFirst.parentElement.appendChild(deleteButton);
+  // Create a new option div
+  var optionDiv = document.createElement("div");
+  optionDiv.classList.add("option");
 
+  // Create the input field
+  var input = document.createElement("input");
+  input.classList.add("Minput");
+  input.type = "text";
+  input.placeholder = "Add";
+  input.required = true;
+
+  // Create the delete button
+  var deleteButton = document.createElement("span");
+  deleteButton.innerHTML = '<img class="dltBtn" src="../Img/x-circle.svg" alt="">';
+
+  // Add the input field and delete button to the option div
+  optionDiv.appendChild(input);
+  optionDiv.appendChild(deleteButton);
+
+  // Add the option div to the options container
+  optionsContainer.appendChild(optionDiv);
 });
