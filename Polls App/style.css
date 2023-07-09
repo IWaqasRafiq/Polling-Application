@@ -121,9 +121,7 @@ h1{
     bottom: 6.5rem;
   }
   
-  #Question{
-    font-size: larger;
-  }
+
 #option{
     margin-top: 0;
 }
@@ -132,4 +130,7 @@ h1{
     height: 1.5em !important;
     cursor: pointer;
 
+}
+.ques{
+    font-size: xx-large;
 }
