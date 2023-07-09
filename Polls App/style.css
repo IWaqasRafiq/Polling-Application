@@ -9,13 +9,18 @@
 body{
     background-image: url(../Img/Poll-BackGround.jpg);
     background-repeat: no-repeat;    
-    background-size: auto;
+    background-size: cover;
     
 }
 .cards{
     display: flex;
     flex-wrap: wrap;
 }
+#resultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 h1{
     padding: 0.5em;
     text-align: center;
@@ -30,7 +35,7 @@ h1{
     margin: 1.5rem 1em 1em 2em;
     border-radius: 25px;
     padding: 2rem 1.5rem;
-    text-align: center;
+    text-align: left;
     background: rgba(0, 0, 0, 0) !important;
     backdrop-filter: blur(9.8px);
     -webkit-backdrop-filter: blur(9.8px);
@@ -118,8 +123,8 @@ h1{
 #option{
     margin-top: 0;
 }
-#file{
-    width: 100%;
+#file, #Ppro{
+    width: 100% !important;
     height: 1.5em !important;
     cursor: pointer;
 
