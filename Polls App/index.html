@@ -29,26 +29,31 @@
                 <div class="modal-body">
                     <div class="ques">
                         Question :
-                        <input id="userQ" type="text" placeholder=" Ask Question">
+                        <input id="userQM" type="text" placeholder=" Ask Question" required="true">
                     </div>
-                    <div class="option">
+                    <div id="optionsContainer">
                         Options :
-                        <input class="input" id="Minput" type="text" placeholder=" Add"> <span><img class="dltBtn"
-                                src="../Img/x-circle.svg" alt=""></span>
+                        <div class="option">
+                            <input class="Minput" id="Minput" type="text" placeholder=" Add" required="true"> <span><img class="dltBtn"
+                                    src="../Img/x-circle.svg" alt=""></span>
+                        </div>
+
                     </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="addButtonM" class="add" class="btn btn-secondary"
                         >Add</button>
-                    <button type="button" id="CreateM" class="CreateM" class="btn btn-primary">Create Poll</button>
+                    <button type="button" id="createButtonM" class="CreateM" class="btn btn-primary">Create Poll</button>
                 </div>
             </div>
         </div>
     </div>
+    <div id="resultsContainer"></div>
     <div class="cards">
-
         <div class="Qcard">
             <div class="poll">
+                
                 <div class="ques">
                     Question :
                     <input id="userQ" type="text" placeholder=" Ask Question">
@@ -62,7 +67,7 @@
                 <button id="Create" class="Create">Create Poll</button>
             </div>
         </div>
-        <div class="Pcard" style="display:none;">
+        <div class="Pcard" id="Pcard" style="display:none;">
             <div class="pollAnswer" >
                 <div class="ques">
                     <p id="Question">What Is Your Fav Lang ?</p>
@@ -75,6 +80,7 @@
         </div>
     </div>
     <script src="./script.js"></script>
+    <script src="modal.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
